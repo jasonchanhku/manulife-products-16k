@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Stack, TextField } from "@fluentui/react";
-import { Send28Filled, MicPulse28Filled, MicProhibited28Filled } from "@fluentui/react-icons";
+import { Send32Filled, MicPulse32Filled, MicPulseOff32Filled } from "@fluentui/react-icons";
 import { WhisperSTT } from "whisper-speech-to-text";
 
 import styles from "./QuestionInput.module.css";
@@ -11,7 +11,7 @@ import styles from "./QuestionInput.module.css";
 // Use the OPEN_AI_API_KEY from the .env file
 // const whisper = new WhisperSTT(process.env.OPEN_AI_API_KEY as string);
 
-const whisper = new WhisperSTT("YOUR KEY");
+const whisper = new WhisperSTT("YOUR_API_KEY");
 
 interface Props {
     onSend: (question: string) => void;
@@ -85,13 +85,13 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend }: Pr
                 onKeyDown={onEnterPress}
             />
             <div className={styles.questionInputButtonsContainer}>
-                <div className={styles.questionInputSendButton} aria-label="Record Audio" onClick={startRecord} style={{ paddingRight: "10px" }}>
-                    <MicPulse28Filled primaryFill="rgba(0, 167, 88, 1)" />
+                <div className={styles.questionInputSendButton} aria-label="Record Audio" onClick={startRecord} style={{ paddingRight: "28px"}}>
+                    <MicPulse32Filled primaryFill="rgba(0, 167, 88, 1)"/>
                 </div>
             </div>
             <div className={styles.questionInputButtonsContainer}>
-                <div className={styles.questionInputSendButton} aria-label="Stop Record Audio" onClick={stopRecord} style={{ paddingRight: "10px" }}>
-                    <MicProhibited28Filled primaryFill="rgba(0, 167, 88, 1)" />
+                <div className={styles.questionInputSendButton} aria-label="Stop Record Audio" onClick={stopRecord} style={{ paddingRight: "28px"}}>
+                    <MicPulseOff32Filled primaryFill="rgba(0, 167, 88, 1)" />
                 </div>
             </div>
             <div className={styles.questionInputButtonsContainer}>
@@ -100,7 +100,7 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend }: Pr
                     aria-label="Ask question button"
                     onClick={sendQuestion}
                 >
-                    <Send28Filled primaryFill="rgba(0, 167, 88, 1)" />
+                    <Send32Filled primaryFill="rgba(0, 167, 88, 1)" />
                 </div>
             </div>
         </Stack>

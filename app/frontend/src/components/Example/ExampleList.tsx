@@ -9,11 +9,11 @@ export type ExampleModel = {
 
 const EXAMPLES: ExampleModel[] = [
     {
-        text: "What is the ManuCentury product?",
-        value: "What is the ManuCentury product?"
+        text: "What can you tell me about Manulife Bright Care Pro?",
+        value: "What can you tell me about Manulife Bright Care Pro?"
     },
-    { text: "Help me summarize the key benefits of ManuCentury.", value: "Help me summarize the key benefits of ManuCentury." },
-    { text: "Recommend me some Manulife products for a 30 year old working professional.", value: "Recommend me some Manulife products for a 30 year old working professional." }
+    { text: "Summarise 5 key benefits of ManuCentury.", value: "Summarise 5 key benefits of ManuCentury." },
+    { text: "Recommend an investment product for a 30 years old office worker.", value: "Recommend an investment product for a 30 years old office worker." }
 ];
 
 interface Props {
